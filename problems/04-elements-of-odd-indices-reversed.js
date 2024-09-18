@@ -4,10 +4,12 @@ returns a new string containing all the elements with odd indices in the input
 string in reverse order.
 */
 
+// 0. create an array variable 
 // 1. define a function elementsOfOddIndicesReversed with a string parameter
 // 2. iterate through the odd indices of the string
+//    a. push the letters into the empty array
 // 3. reverse the order of the indices
-// 4. return the letters in each odd index
+// 4. return the letters in each odd index as a string
 
 function elementsOfOddIndicesReversed(str) {
   let arr = [];
