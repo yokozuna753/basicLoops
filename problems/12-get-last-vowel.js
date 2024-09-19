@@ -18,9 +18,9 @@ Vowels are the letters "a", "e", "i", "o", "u".
 function getLastVowel(str) {
   let vowels = "aeiou";
   for (let i = str.length - 1; i >= 0; i--) {
-    let char = str.charAt(i);
+    let char = word[i];
     if (vowels.includes(char)) {
-      return char;
+      return char + "b" + char;
     }
   }
   return null;

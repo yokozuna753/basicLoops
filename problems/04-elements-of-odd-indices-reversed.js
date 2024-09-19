@@ -4,7 +4,7 @@ returns a new string containing all the elements with odd indices in the input
 string in reverse order.
 */
 
-// 0. create an array variable 
+// 0. create an array variable
 // 1. define a function elementsOfOddIndicesReversed with a string parameter
 // 2. iterate through the odd indices of the string
 //    a. push the letters into the empty array
@@ -17,12 +17,12 @@ function elementsOfOddIndicesReversed(str) {
     arr.push(str[i]);
   }
   arr.reverse();
-  return arr.join('');
+  return arr.join("");
 }
 
-console.log(elementsOfOddIndicesReversed('academy')); // 'mdc'
-console.log(elementsOfOddIndicesReversed('planet')); // 'tnl'
-console.log(elementsOfOddIndicesReversed('sport')); // 'rp'
+console.log(elementsOfOddIndicesReversed("academy")); // 'mdc'
+console.log(elementsOfOddIndicesReversed("planet")); // 'tnl'
+console.log(elementsOfOddIndicesReversed("sport")); // 'rp'
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = elementsOfOddIndicesReversed;
