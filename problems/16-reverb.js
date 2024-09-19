@@ -27,6 +27,7 @@ function reverb(word) {
   }
   return word;
 }
+console.log("hello world", "word");
 
 console.log(reverb("running")); // runninging
 console.log(reverb("FAMILY")); // FAMILYILY
