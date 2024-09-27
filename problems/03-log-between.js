@@ -11,11 +11,19 @@ high numbers.
 // 3. iterate from the low number to the high number, they are both included
 // 4. return the range between the two numbers (inclusive)
 
-function logBetween(lowNum, highNum) {
-  for (let i = lowNum; i <= highNum; i++) {
+let logBetween = function(min, max){
+  for(let i = min;i <= max; i++){
     console.log(i);
   }
 }
+
+// function logBetween(lowNum, highNum) {
+//   for (let i = lowNum; i <= highNum; i++) {
+//     console.log(i);
+//   }
+// }
+
+
 
 logBetween(-1, 2);
 /* prints out:

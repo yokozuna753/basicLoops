@@ -14,19 +14,31 @@ Vowels are the letters "a", "e", "i", "o", "u".
     - return everything before the vowel + "b" + everything after the vowel
 
 */
-let vowels = ["a", "e", "i", "o", "u"];
-function sillyString(word) {
-  let newWord = "";
-  for (i = 0; i < word.length; i++) {
+// let vowels = ["a", "e", "i", "o", "u"];
+// function sillyString(word) {
+//   let newWord = "";
+//   for (i = 0; i < word.length; i++) {
+//     let char = word[i];
+//     if (vowels.includes(char)) {
+//       newWord += char + "b" + char;
+//     } else {
+//       newWord += char;
+//     }
+//   }
+//   return newWord;
+// }
+
+let sillyString = function(word){
+  let newStr = '';
+  let vowels = 'aeiou'
+  for(let i = 0; i < word.length; i++){
     let char = word[i];
-    if (vowels.includes(char)) {
-      newWord += char + "b" + char;
-    } else {
-      newWord += char;
-    }
+    if(!vowels.includes(char)) newStr += char
+    if(vowels.includes(char)) newStr += char + 'b' + char
   }
-  return newWord;
+  return newStr
 }
+
 console.log(sillyString("stop"));
 
 // console.log(sillyString("stop")); // stobop

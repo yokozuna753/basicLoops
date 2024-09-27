@@ -4,16 +4,13 @@ parameter. The function should return a new string containing only the first
 half of characters in the string parameter.
 */
 
-// 1. define a function firstHalf with a string parameter
-// 2. iterate through HALF of the input string
-// 3. return the first half of the characters
-
-function firstHalf(str) {
-  let arr = [];
-  for (i = 0; i < str.length / 2; i++) {
-    arr.push(str[i]);
+let firstHalf = function(str){
+  let newStr = '';
+  for(let i = 0; i < str.length / 2; i++){
+    let char = str[i];
+    newStr += char;
   }
-  return arr.join('');
+  return newStr;
 }
 
 console.log(firstHalf('academy')); // 'acad'

@@ -4,21 +4,17 @@ returns a new string containing all the elements with odd indices in the input
 string in reverse order.
 */
 
-// 0. create an array variable
-// 1. define a function elementsOfOddIndicesReversed with a string parameter
-// 2. iterate through the odd indices of the string
-//    a. push the letters into the empty array
-// 3. reverse the order of the indices
-// 4. return the letters in each odd index as a string
-
-function elementsOfOddIndicesReversed(str) {
-  let arr = [];
-  for (i = 1; i < str.length; i += 2) {
-    arr.push(str[i]);
+let elementsOfOddIndicesReversed = function (str) {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (i % 2 !== 0) {
+      newStr = char + newStr;
+      console.log('char ====>',char, 'newStr====>', newStr);
+    }
   }
-  arr.reverse();
-  return arr.join("");
-}
+  // return newStr;
+};
 
 console.log(elementsOfOddIndicesReversed("academy")); // 'mdc'
 console.log(elementsOfOddIndicesReversed("planet")); // 'tnl'

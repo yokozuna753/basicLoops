@@ -9,13 +9,13 @@ HINT: This function only needs to print using console.log it does not need to
 return anything.
 */
 
-function logBetweenStepper(lowNum, highNum, interval) {
-  for (i = lowNum; i <= highNum; i += interval) {
+let logBetweenStepper = function(min, max, interval){
+  for(let i = min; i <= max; i = i + interval){
     console.log(i);
   }
 }
 
-logBetweenStepper(5, 9, 2);
+logBetweenStepper(5, 9, 1);
 /* prints out:
 5
 6

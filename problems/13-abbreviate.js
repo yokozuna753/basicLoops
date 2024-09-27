@@ -5,21 +5,20 @@ should return a new string where all of its vowels are removed.
 Vowels are the letters "a", "e", "i", "o", "u".
 */
 
-/*
-- write a function that takes in a string parameter
-- declare a vowels variable
-- iterate through the string
-- check if the string contains any vowels
-- return the string without all the vowels
-*/
+let vowels = "aeiouAEIOU";
 
 function abbreviate(str) {
-  return str.replace(/[aeiou]/gi, "");
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (!vowels.includes(char)) newStr += char;
+  }
+  return newStr;
 }
 
 console.log(abbreviate("wonderful")); // 'wndrfl'
 // console.log(abbreviate('mystery')); // 'mystry'
-// console.log(abbreviate('Accordian')); // 'ccrdn'
+console.log(abbreviate('Accordian')); // 'ccrdn'
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = abbreviate;

@@ -1,31 +1,25 @@
 /*
-Define a function getFirstVowel that takes in a string parameter and returns the
+Define a function hasVowel that takes in a string parameter and returns the
 first vowel that appears sequentially in the string. If the string does not
 contain a vowel, return null.
 
 
 Vowels are the letters "a", "e", "i", "o", "u".
 */
-/* 
-1. declare a vowels variable
-2. declare a function getFirstVowel that takes in a string parameter
-3. iterate through the string parameter
-4. declare a variable that states what letter the for loop is at in the string
-5.if the string includes a vowel:
-  a. return the first instance of a vowel if "i" is a vowel
-  b. return null
-*/
 
-function getFirstVowel(str) {
-  let vowels = "aeiou";
+let vowels = "aeiou";
+
+let getFirstVowel = function (str) {
+  let newStr = "";
   for (let i = 0; i < str.length; i++) {
-    let char = str.charAt(i);
+    let char = str[i];
+
     if (vowels.includes(char)) {
       return char;
     }
   }
   return null;
-}
+};
 
 console.log(getFirstVowel("battery")); // 'a'
 console.log(getFirstVowel("tunnel")); // 'u'

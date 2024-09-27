@@ -15,19 +15,17 @@ Vowels are the letters "a", "e", "i", "o", "u".
 - return null if the argument passed is not a string
 */
 
-// let includes = vowels.includes(word[i])
+let vowels = "aeiouAEIOU";
+let nums = '123456789'
 function reverb(word) {
-  let vowels = "aeiou";
-  if (typeof word !== "string") return null;
-  for (i = word.length - 1; i >= 0; i--) {
+
+  for (let i = word.length - 1; i >= 0; i--) {
     let char = word[i];
-    if (vowels.includes(char.toLowerCase())) {
-      return word + word.slice(i);
-    }
+    if (vowels.includes(char)) return word + word.slice(i);
+    else if (nums.includes(char))return word;
   }
-  return word;
+  return null;
 }
-console.log("hello world", "word");
 
 console.log(reverb("running")); // runninging
 console.log(reverb("FAMILY")); // FAMILYILY

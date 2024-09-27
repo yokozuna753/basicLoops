@@ -12,15 +12,17 @@ Vowels are the letters "a", "e", "i", "o", "u".
 //  a. if the vowels variable includes at least one vowel in the string, return true
 //  b. if not return false
 
-function hasVowel(str) {
-  let vowels = 'aeiou';
-  for (i = 0; i < str.length; i++) {
-    if(vowels.includes(str.charAt(i))){
-      return true;
-    }
+let vowels = 'aeiou'
+
+let hasVowel = function(word){
+  for(let i = 0; i < word.length; i++){
+    let char = word[i];
+    // console.log(char);
+    if(vowels.includes(char)) return true;
   }
   return false;
 }
+
 
 console.log(hasVowel('dog')); // => true
 console.log(hasVowel('conventional')); // => true
